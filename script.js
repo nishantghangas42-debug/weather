@@ -1,5 +1,13 @@
 const apiKey = "09a0810f68d5444ba6a98759b4dbca4c";
 
+const btn = document.getElementById("btn");
+
+btn.addEventListener("keypress", (e) => {
+    if(e.key === "Enter") {
+        getWeather();
+    }
+})
+
 async function getWeather() {
 
     const city = document.getElementById("city").value;
